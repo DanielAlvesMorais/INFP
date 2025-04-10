@@ -1,3 +1,4 @@
+/* ===== ESTRUTURA PRINCIPAL DO ASIDE ===== */
 aside {
     display: flex;
     justify-content: space-between;
@@ -9,55 +10,60 @@ aside {
     flex-wrap: wrap;
     gap: 100px;
   }
-
-  .azul{
-    background-image: url(img/ChatGPT\ Image\ 9_04_2025\,\ 16_45_29.png);
+  
+  /* ===== BACKGROUND ESPECÍFICO ===== */
+  .azul {
+    background-image: url(img/fundo.png);
   }
-
+  
+  /* ===== SEÇÕES DE INFORMAÇÃO ===== */
   .info {
     flex: 1;
     min-width: 300px;
   }
-  .info2{
+  
+  .info2 {
     flex: 1;
     min-width: 300px;
     text-align: right;
   }
-
+  
   .info h3 {
     font-size: 16px;
     color: #000;
     margin-bottom: 10px;
   }
-
+  
   .info h2 {
     font-size: 36px;
     color: #000;
     margin: 0;
   }
-
+  
   .info h1 {
     font-size: 42px;
     color: #000;
     font-weight: bold;
     margin-top: 10px;
   }
-
+  
   .info p {
     margin-top: 20px;
     font-size: 18px;
     color: #333;
   }
-
+  
+  /* ===== CARROSSEL PRINCIPAL ===== */
   .carousel-container {
     flex: 1;
     min-width: 300px;
-    height: 300px; /* você pode ajustar conforme o tamanho das imagens */
-    overflow: hidden; /* ESSENCIAL: esconde as imagens fora da área visível */
+    height: 300px;
+    overflow: hidden;
     position: relative;
     border-radius: 12px;
   }
   
+  /* Slide do carrossel */
   .carousel-slide {
     display: flex;
     width: 100%;
@@ -66,12 +72,14 @@ aside {
   }
   
   .carousel-slide img {
-    width: 100%; /* imagem ocupa toda a largura do container */
-    height: 100%; /* ocupa toda a altura do container */
-    object-fit: cover; /* mantém o aspecto e cobre o container */
-    flex-shrink: 0; /* impede que a imagem diminua */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
     border-radius: 12px;
   }
+  
+  /* Versão duplicada do container para diferentes layouts */
   .carousel-container {
     position: relative;
     width: 100%;
@@ -97,6 +105,7 @@ aside {
     display: block;
   }
   
+  /* ===== BOTÕES DE NAVEGAÇÃO ===== */
   .nav-button {
     position: absolute;
     top: 50%;
@@ -117,15 +126,16 @@ aside {
     right: 10px;
   }
   
-
+  /* Estilo alternativo para imagens com link */
   .carousel-slide a img {
-    width: 100%; /* imagem ocupa toda a largura do container */
-    height: 100%; /* ocupa toda a altura do container */
-    object-fit: cover; /* mantém o aspecto e cobre o container */
-    flex-shrink: 0; /* impede que a imagem diminua */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
     border-radius: 12px;
   }
-
+  
+  /* Estilo alternativo do botão de navegação */
   .nav-button {
     position: absolute;
     top: 50%;
@@ -139,7 +149,8 @@ aside {
     z-index: 10;
     transition: transform 0.2s ease;
   }
-
+  
+  /* ===== CONTAINER DE IMAGENS ===== */
   .image-container {
     flex: 1;
     min-width: 300px;
@@ -147,32 +158,202 @@ aside {
     justify-content: center;
     padding: 20px;
   }
-
+  
   .image-container img {
     max-width: 100%;
     height: auto;
     border-radius: 12px;
   }
   
+  /* Hover nos botões */
   .nav-button:hover {
     transform: translateY(-50%) scale(1.2);
   }
-
+  
   .prev {
     left: 10px;
   }
-
+  
   .next {
     right: 10px;
   }
-
+  
+  /* ===== RESPONSIVIDADE DO ASIDE E CARROSSEL ===== */
   @media (max-width: 768px) {
     aside {
       flex-direction: column;
       text-align: center;
     }
-
+  
     .carousel-container {
       margin-top: 30px;
     }
   }
+  
+  /* ===== SEÇÃO DE PALESTRAS ===== */
+  .palestra-aside {
+    border-top: 4px solid #004466;
+    padding: 32px 0;
+    margin-top: 48px;
+    background-color: #f8f9fa;
+  }
+  
+  .palestra-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .palestra-coluna {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .palestra-coluna h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .palestra-coluna p {
+    font-size: 1rem;
+    margin: 8px 0;
+  }
+  
+  .qrcode-img {
+    width: 160px;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  /* ===== RESUMO ===== */
+  .resumo {
+    text-align: left;
+  }
+  
+  .resumo h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+  }
+  
+  .resumo p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .resumo h2 {
+      font-size: 24px;
+    }
+  
+    .resumo p {
+      font-size: 16px;
+    }
+  }
+  
+  /* ===== BODY E HEADER ===== */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+  }
+  
+  header {
+    position: relative;
+    background-image: url(img/fundo.png);
+    color: white;
+    padding: 40px 60px;
+    overflow: hidden;
+  }
+  
+  .header-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    max-height: 100px;
+  }
+  
+  .title-container {
+    text-align: right;
+  }
+  
+  .title-container h1 {
+    margin: 0;
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .title-container p {
+    margin: 8px 0 0;
+    font-size: 18px;
+    opacity: 0.9;
+  }
+  
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #004466;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 24px;
+    border-radius: 50%;
+  }
+  
+  .nav-button.prev {
+    left: 10px;
+  }
+  
+  .nav-button.next {
+    right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    .title-container {
+      text-align: left;
+      margin-top: 20px;
+    }
+  }  
